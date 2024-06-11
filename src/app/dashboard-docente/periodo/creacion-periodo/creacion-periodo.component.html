@@ -1,0 +1,36 @@
+<!-- src/app/components/creacion-periodo/creacion-periodo.component.html -->
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Registrar Periodo</h2>
+        <form [formGroup]="periodoForm" (ngSubmit)="onSubmit()" class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2" for="nombre">Nombre</label>
+                <input formControlName="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="nombre" type="text" placeholder="Nombre">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2" for="inicio">Inicio</label>
+                <input formControlName="inicio" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="inicio" type="date">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2" for="fin">Fin</label>
+                <input formControlName="fin" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="fin" type="date">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2" for="sede">Sede</label>
+                <select formControlName="sede" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="sede">
+                    <option *ngFor="let sede of sedes" [value]="sede.id">{{ sede.nombre }}</option>
+                </select>
+            </div>
+            <div class="flex justify-center mt-8">
+                <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+                    Registrar Periodo
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

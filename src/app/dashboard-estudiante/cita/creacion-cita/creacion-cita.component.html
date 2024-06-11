@@ -1,0 +1,63 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-de-navbar></app-de-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Registrar Cita</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <form class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="fecha">Fecha</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="fecha" type="date" placeholder="Fecha">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="hora">Hora</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="hora" type="time" placeholder="Hora">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="motivo">Motivo</label>
+              <textarea class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="motivo" placeholder="Motivo"></textarea>
+            </div>
+          </form>
+        </div>
+        <div>
+          <form class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="odontologo">Odontólogo</label>
+              <select class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="odontologo">
+                <option value="dr_juan_perez">Dr. Juan Perez</option>
+                <option value="dra_maria_gomez">Dra. Maria Gomez</option>
+                <option value="dr_carlos_cordova">Dr. Carlos Cordova</option>
+                <option value="dra_ana_rodriguez">Dra. Ana Rodriguez</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="sede">Sede</label>
+              <select class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="sede">
+                <option value="huancayo">Huancayo</option>
+                <option value="lima">Lima</option>
+                <option value="ayacucho">Ayacucho</option>
+                <option value="arequipa">Arequipa</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="extras">Extras</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="extras" type="text" placeholder="Extras">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="dni">DNI del Paciente</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="dni" type="text" pattern="[0-9]{8}" placeholder="DNI (8 dígitos)">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+          Registrar Cita
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

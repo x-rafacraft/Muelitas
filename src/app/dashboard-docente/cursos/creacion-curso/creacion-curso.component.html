@@ -1,0 +1,33 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Registrar Curso</h2>
+      <form [formGroup]="cursoForm" (ngSubmit)="onSubmit()" class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="nombreCurso">Nombre del Curso</label>
+          <input formControlName="nombreCurso" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="nombreCurso" type="text" placeholder="Nombre del Curso">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="nrc">NRC</label>
+          <input formControlName="nrc" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="nrc" type="text" placeholder="NRC">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="creditoCurso">Crédito</label>
+          <input formControlName="creditoCurso" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="creditoCurso" type="number" placeholder="Crédito" min="1" max="5">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="descripcionCurso">Descripción</label>
+          <textarea formControlName="descripcionCurso" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="descripcionCurso" placeholder="Descripción del Curso"></textarea>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+            Registrar Curso
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

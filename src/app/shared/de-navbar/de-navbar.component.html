@@ -1,0 +1,32 @@
+<div class="left-menu">
+  <div class="logo" routerLink="/dashboard-estudiante/home"><i class="fa fa-align-justify"></i>
+    <div>Dentitos</div>
+  </div>
+  <div class="accordion">
+    <div class="section" routerLink="/dashboard-estudiante/home" routerLinkActive="active">
+      <input id="section-1" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/home')"/>
+      <label for="section-1"><a routerLink="/dashboard-estudiante/home" routerLinkActive="active"><span>Home</span></a></label>
+    </div>
+    <div class="section">
+      <input id="section-2" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/cita')"/>
+      <label for="section-2"><span>Citas</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-estudiante/cita')">
+        <ul>
+          <li routerLink="/dashboard-estudiante/cita/lista-cita" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de citas</span></a></li>
+          <li routerLink="/dashboard-estudiante/cita/creacion-cita" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear cita</span></a></li>
+          <li routerLink="/dashboard-estudiante/cita/modificar-cita" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-3" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/mensajeria')"/>
+      <label for="section-3"><span>Mensajeria</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-estudiante/mensajeria')">
+        <ul>
+          <li routerLink="/dashboard-estudiante/mensajeria/bandeja-entrada" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Bandeja de Entrada</span></a></li>
+          <li routerLink="/dashboard-estudiante/mensajeria/enviar-mensaje" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Enviar Mensaje</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

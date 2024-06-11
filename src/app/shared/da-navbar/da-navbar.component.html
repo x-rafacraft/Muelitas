@@ -1,0 +1,32 @@
+<div class="left-menu">
+  <div class="logo" routerLink="/dashboard-admin/home"><i class="fa fa-align-justify"></i>
+    <div>Dentitos</div>
+  </div>
+  <div class="accordion">
+    <div class="section" routerLink="/dashboard-admin/home" routerLinkActive="active">
+      <input id="section-1" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/home')"/>
+      <label for="section-1"><a routerLink="/dashboard-admin/home" routerLinkActive="active"><span>Inicio</span></a></label>
+    </div>
+    <div class="section">
+      <input id="section-2" type="radio" name="accordion-1" [checked]="isActive('/dashboard-admin/usuarios')"/>
+      <label for="section-2"><span>Usuarios</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-admin/usuarios')">
+        <ul>
+          <li routerLink="/dashboard-admin/usuarios/lista-usuario" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de Usuarios</span></a></li>
+          <li routerLink="/dashboard-admin/usuarios/creacion-usuario" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear Usuario</span></a></li>
+          <li routerLink="/dashboard-admin/usuarios/modificar-usuario" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar Usuario</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-3" type="radio" name="accordion-1" [checked]="isActive('/dashboard-admin/mensajeria')"/>
+      <label for="section-3"><span>Mensajeria</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-admin/mensajeria')">
+        <ul>
+          <li routerLink="/dashboard-admin/mensajeria/bandeja-entrada" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Bandeja de Entrada</span></a></li>
+          <li routerLink="/dashboard-admin/mensajeria/enviar-mensaje" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Enviar Mensaje</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

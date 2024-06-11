@@ -1,0 +1,100 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-da-navbar></app-da-navbar>
+  </div>
+  <div class="flex-1">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Modificar Usuario</h2>
+      <form class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="nombre">Nombre</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="nombre" type="text" placeholder="Nombre" maxlength="100">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="apellido">Apellido</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="apellido" type="text" placeholder="Apellido" maxlength="100">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="celular">Celular</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="celular" type="text" placeholder="Celular" maxlength="20">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="correo">Correo</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="correo" type="email" placeholder="Correo" maxlength="255">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="condicion">Condición</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="condicion" type="text" placeholder="Condición" maxlength="50">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="foto">Foto</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="foto" type="file" accept="image/*">
+            </div>
+          </div>
+          <div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="estado">Estado</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="estado" type="text" placeholder="Estado" maxlength="50">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="genero">Género</label>
+              <select class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="tipo_documento">Tipo de Documento</label>
+              <select class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="tipo_documento" onchange="toggleCodigo()">
+                <option value="dni">DNI</option>
+                <option value="carnet_extranjeria">Carnet de Extranjería</option>
+                <!-- Añade más opciones según sea necesario -->
+              </select>
+            </div>
+            <div class="mb-4 hidden" id="codigo_div">
+              <label class="block text-sm font-bold mb-2" for="codigo">Código</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="codigo" type="text" placeholder="Código" maxlength="20">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="num_doc">Número de Documento</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="num_doc" type="text" placeholder="Número de Documento" maxlength="20">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="rol">Rol</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="rol" type="text" placeholder="Rol" maxlength="50">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="sede">Sede</label>
+              <select class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="sede">
+                <option value="1">Huancayo</option>
+                <option value="2">Lima</option>
+                <option value="3">Ayacucho</option>
+                <option value="4">Arequipa</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+            Modificar Usuario
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleCodigo() {
+    const tipoDocumento = document.getElementById('tipo_documento').value;
+    const codigoDiv = document.getElementById('codigo_div');
+    if (tipoDocumento === 'dni' || tipoDocumento === 'carnet_extranjeria') {
+      codigoDiv.classList.remove('hidden');
+    } else {
+      codigoDiv.classList.add('hidden');
+    }
+  }
+</script>

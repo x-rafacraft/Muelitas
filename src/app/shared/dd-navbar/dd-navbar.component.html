@@ -1,0 +1,55 @@
+<div class="left-menu">
+  <div class="logo" routerLink="/dashboard-docente/home"><i class="fa fa-align-justify"></i>
+    <div>Dentitos</div>
+  </div>
+  <div class="accordion">
+    <div class="section" routerLink="/dashboard-docente/home" routerLinkActive="active">
+      <input id="section-1" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/home')"/>
+      <label for="section-1"><a routerLink="/dashboard-docente/home" routerLinkActive="active"><span>Home</span></a></label>
+    </div>
+    <div class="section">
+      <input id="section-2" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/cita')"/>
+      <label for="section-2"><span>Citas</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-docente/cita')">
+        <ul>
+          <li routerLink="/dashboard-docente/cita/lista-cita" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de citas</span></a></li>
+          <li routerLink="/dashboard-docente/cita/creacion-cita" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear cita</span></a></li>
+          <li routerLink="/dashboard-docente/cita/modificar-cita" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar cita</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-3" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/cursos')"/>
+      <label for="section-3"><span>Cursos</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-docente/cursos')">
+        <ul>
+          <li routerLink="/dashboard-docente/cursos/lista-curso" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de Cursos</span></a></li>
+          <li routerLink="/dashboard-docente/cursos/creacion-curso" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear Curso</span></a></li>
+          <li routerLink="/dashboard-docente/cursos/modificar-curso" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar Curso</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-4" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/periodo')"/>
+      <label for="section-4"><span>Periodo</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-docente/periodo')">
+        <ul>
+          <li routerLink="/dashboard-docente/periodo/lista-periodo" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de Periodos</span></a></li>
+          <li routerLink="/dashboard-docente/periodo/creacion-periodo" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear Periodo</span></a></li>
+          <li routerLink="/dashboard-docente/periodo/modificar-periodo" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar Periodo</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-5" type="radio" name="accordion-1" [checked]="isActive('/dashboard-docente/sede')"/>
+      <label for="section-5"><span>Sedes</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-docente/sede')">
+        <ul>
+          <li routerLink="/dashboard-docente/sede/lista-sede" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista de Sedes</span></a></li>
+          <li routerLink="/dashboard-docente/sede/creacion-sede" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear Sede</span></a></li>
+          <li routerLink="/dashboard-docente/sede/modificar-sede" routerLinkActive="active"><i class="fa fa-archive"></i><a><span>Modificar Sede</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

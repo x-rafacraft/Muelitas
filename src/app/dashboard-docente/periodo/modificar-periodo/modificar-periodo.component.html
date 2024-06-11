@@ -1,0 +1,20 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+
+  </div>
+</div>
+
+<script>
+  function toggleCodigo() {
+    const tipoDocumento = document.getElementById('tipo_documento').value;
+    const codigoDiv = document.getElementById('codigo_div');
+    if (tipoDocumento === 'dni' || tipoDocumento === 'carnet_extranjeria') {
+      codigoDiv.classList.remove('hidden');
+    } else {
+      codigoDiv.classList.add('hidden');
+    }
+  }
+</script>

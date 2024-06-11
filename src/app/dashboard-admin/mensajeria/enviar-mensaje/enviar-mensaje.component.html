@@ -1,0 +1,35 @@
+<div class="flex flex-row justify-between">
+  <div class="w-1/5">
+    <app-da-navbar></app-da-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
+      <h2 class="text-2xl font-bold mb-6 text-gray-700 text-center">Mensaje sobre Estado del programa</h2>
+      <form>
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+          <div class="mb-4">
+            <label for="Codigo" class="block text-gray-700 text-sm font-bold mb-2">Codigo del estudiante:</label>
+            <input type="text" id="codigo" name="codigo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-4">
+            <label for="Asunto" class="block text-gray-700 text-sm font-bold mb-2">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-4">
+            <label for="descripcion" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"></textarea>
+          </div>
+
+        </div>
+        <div class="flex justify-end mt-4">
+          <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded mr-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+            Enviar
+          </button>
+          <button type="reset" class="bg-gray-500 text-white font-bold py-2 px-4 rounded hover:bg-gray-700 focus:outline-none focus:shadow-outline">
+            Borrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
