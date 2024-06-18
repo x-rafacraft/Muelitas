@@ -32,7 +32,7 @@ export default class CreacionTratamientoComponent {
     onSubmit() {
       if (this.tratamientoForm.valid) {
           this.tratamientoService.addTratamiento(this.tratamientoForm.value).subscribe(() => {
-              this.router.navigate(['/lista-tratamiento']);
+            this.router.navigate(['/dashboard-docente/tratamiento/lista-tratamiento']);
           });
       }
   }

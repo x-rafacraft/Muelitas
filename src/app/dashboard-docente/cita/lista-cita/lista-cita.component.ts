@@ -29,7 +29,7 @@ export default class ListaCitaComponent implements OnInit {
 
   ngOnInit(): void {
     this.citaResults$ = this.service.getCitaList();
-    this.filteredCitaResults$ = this.citaResults$; // Initialize filtered results with all results
+    this.filteredCitaResults$ = this.citaResults$;
   }
 
   onFilterChange(): void {

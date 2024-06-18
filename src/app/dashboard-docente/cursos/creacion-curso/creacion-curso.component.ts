@@ -34,7 +34,7 @@ export default class CreacionCursoComponent {
     onSubmit() {
       if (this.cursoForm.valid) {
           this.cursoService.addCurso(this.cursoForm.value).subscribe(() => {
-              this.router.navigate(['/lista-curso']);
+            this.router.navigate(['/dashboard-docente/cursos/lista-curso']);
           });
       }
   }

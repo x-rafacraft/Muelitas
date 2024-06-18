@@ -42,6 +42,7 @@ export default class CreacionCitaComponent {
           const newCita: Cita = this.citaForm.value;
             this.citaService.addCita(newCita).subscribe(response => {
               console.log('Cita creada',response);
+              this.router.navigate(['/dashboard-docente/cita/lista-cita']);
             });
         }
     }

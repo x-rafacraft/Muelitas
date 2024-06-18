@@ -34,7 +34,7 @@ export default class CreacionSedeComponent {
     onSubmit() {
         if (this.sedeForm.valid) {
             this.sedeService.addSede(this.sedeForm.value).subscribe(() => {
-                this.router.navigate(['/lista-sede']);
+                this.router.navigate(['/dashboard-docente/sede/lista-sede']);
             });
         }
     }

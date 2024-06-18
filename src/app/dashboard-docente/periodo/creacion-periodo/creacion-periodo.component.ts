@@ -49,7 +49,7 @@ export default class CreacionPeriodoComponent implements OnInit {
               sede: this.sedes.find(sede => sede.id === this.periodoForm.value.sede)
           };
           this.periodoService.addPeriodo(periodo).subscribe(() => {
-              this.router.navigate(['/lista-periodo']);
+              this.router.navigate(['/dashboard-docente/periodo/lista-periodo']);
           });
       }
   }

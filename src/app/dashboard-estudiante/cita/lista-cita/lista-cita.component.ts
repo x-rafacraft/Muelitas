@@ -70,7 +70,7 @@ export default class ListaCitaComponent implements OnInit {
   }
 
   editCita(id: number): void {
-    this.router.navigate([`/dashboard-docente/cita/modificar-cita`, id]);
+    this.router.navigate([`/dashboard-estudiante/cita/modificar-cita`, id]);
   }
 
   deleteCita(id: number): void {

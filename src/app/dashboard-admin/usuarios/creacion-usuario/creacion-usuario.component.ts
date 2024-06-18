@@ -35,7 +35,7 @@ export default class CreacionUsuarioComponent {
     onSubmit() {
         if (this.userForm.valid) {
             this.userService.addUser(this.userForm.value).subscribe(() => {
-                this.router.navigate(['/lista-usuario']);
+              this.router.navigate(['/dashboard-admin/usuarios/lista-usuario']);
             });
         }
     }
