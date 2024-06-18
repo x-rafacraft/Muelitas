@@ -18,8 +18,18 @@
       </div>
     </div>
     <div class="section">
-      <input id="section-3" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/mensajeria')"/>
-      <label for="section-3"><span>Mensajeria</span></label>
+      <input id="section-3" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/paciente')"/>
+      <label for="section-3"><span>Pacientes</span></label>
+      <div class="content" [class.open]="isActive('/dashboard-estudiante/paciente')">
+        <ul>
+          <li routerLink="/dashboard-estudiante/paciente/lista-paciente" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Lista pacientes</span></a></li>
+          <li routerLink="/dashboard-estudiante/paciente/creacion-paciente" routerLinkActive="active"><i class="fa fa-share"></i><a><span>Crear paciente</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <input id="section-4" type="radio" name="accordion-1" [checked]="isActive('/dashboard-estudiante/mensajeria')"/>
+      <label for="section-4"><span>Mensajeria</span></label>
       <div class="content" [class.open]="isActive('/dashboard-estudiante/mensajeria')">
         <ul>
           <li routerLink="/dashboard-estudiante/mensajeria/bandeja-entrada" routerLinkActive="active"><i class="fa fa-inbox"></i><a><span>Bandeja de Entrada</span></a></li>

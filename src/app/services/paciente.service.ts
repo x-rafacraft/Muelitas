@@ -7,8 +7,7 @@ import { Paciente } from '../interfaces/paciente';
   providedIn: 'root'
 })
 export class PacienteService {
-
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/paciente';
+  private apiUrl = 'http://localhost:8080/ToothLinkAPI/paciente';
 
   constructor(private http: HttpClient) { }
 

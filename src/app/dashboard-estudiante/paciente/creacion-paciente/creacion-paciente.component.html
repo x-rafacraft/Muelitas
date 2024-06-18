@@ -1,0 +1,99 @@
+<div class="flex min-h-screen bg-gradient-to-r text-gray-800">
+  <div class="w-1/5 bg-white text-gray-700">
+    <app-de-navbar></app-de-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-6 py-8 max-w-7xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Registrar Paciente</h2>
+      <form [formGroup]="pacienteForm" (ngSubmit)="onSubmit()" class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="FechaCreacion">Fecha de Creación</label>
+              <input formControlName="FechaCreacion" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="FechaCreacion" type="date" placeholder="Fecha de Creación">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="HoraCreacion">Hora de Creación</label>
+              <input formControlName="HoraCreacion" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="HoraCreacion" type="time" placeholder="Hora de Creación">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Nombre">Nombre</label>
+              <input formControlName="Nombre" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Nombre" placeholder="Nombre del paciente">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="ApellidoPaterno">Apellido Paterno</label>
+              <input formControlName="ApellidoPaterno" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="ApellidoPaterno" placeholder="Apellido Paterno">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="ApellidoMaterno">Apellido Materno</label>
+              <input formControlName="ApellidoMaterno" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="ApellidoMaterno" placeholder="Apellido Materno">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Sexo">Sexo</label>
+              <select formControlName="Sexo" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Sexo">
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Lugar">Lugar</label>
+              <input formControlName="Lugar" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Lugar" placeholder="Lugar">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Domicilio">Domicilio</label>
+              <input formControlName="Domicilio" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Domicilio" placeholder="Domicilio">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-bold mb-2" for="FechaNacimiento">Fecha de Nacimiento</label>
+              <input formControlName="FechaNacimiento" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="FechaNacimiento" type="date" placeholder="Fecha de Nacimiento">
+            </div>
+          </div>
+          <div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="EstadoCivil">Estado Civil</label>
+              <select formControlName="EstadoCivil" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="EstadoCivil">
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="NroCelular">Teléfono</label>
+              <input formControlName="NroCelular" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="NroCelular" placeholder="Número de celular">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Correo">Correo</label>
+              <input formControlName="Correo" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Correo" placeholder="Correo">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Ocupacion">Ocupación</label>
+              <input formControlName="Ocupacion" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Ocupacion" placeholder="Ocupación">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="Responsable">Responsable</label>
+              <input formControlName="Responsable" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="Responsable" placeholder="Responsable">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="DomicilioResponsable">Domicilio del Responsable</label>
+              <input formControlName="DomicilioResponsable" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="DomicilioResponsable" placeholder="Domicilio del Responsable">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="CelularResponsable">Teléfono del Responsable</label>
+              <input formControlName="CelularResponsable" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="CelularResponsable" placeholder="Teléfono del Responsable">
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-bold mb-2" for="MotivoConsulta">Motivo Consulta</label>
+              <input formControlName="MotivoConsulta" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" id="MotivoConsulta" placeholder="Motivo de Consulta">
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-opacity-50" type="submit">
+            Registrar Paciente
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

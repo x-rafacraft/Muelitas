@@ -51,6 +51,19 @@ export const routes: Routes = [
         ]
       },
       {
+        path: 'paciente',
+        children :[
+          {
+            path: 'creacion-paciente',
+            loadComponent: () => import('./dashboard-estudiante/paciente/creacion-paciente/creacion-paciente.component')
+          },
+          {
+            path: 'lista-paciente',
+            loadComponent: () => import('./dashboard-estudiante/paciente/lista-paciente/lista-paciente.component')
+          },
+        ]
+      },
+      {
         path: 'mensajeria',
         children :[
           {
