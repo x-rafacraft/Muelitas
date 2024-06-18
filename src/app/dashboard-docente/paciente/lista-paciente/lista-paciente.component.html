@@ -1,0 +1,40 @@
+<div class="flex flex-row justify-between">
+  <div class="w-1/5">
+    <app-dd-navbar></app-dd-navbar>
+  </div>
+  <div class="w-4/5">
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold mb-4">Listado de Pacientes</h2>
+      <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+        <div class="inline-block min-w-full shadow overflow-hidden rounded-lg border-b border-gray-200">
+          <table class="min-w-full leading-normal">
+            <thead>
+              <tr>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ID</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Nombre</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Apellido Paterno</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Sexo</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Fecha de Nacimiento</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Correo</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Teléfono</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Responsable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let paciente of pacienteResults$ | async">
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.id }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.Nombre }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.ApellidoPaterno }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.Sexo }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.FechaNacimiento | date }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.Correo }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.NroCelular }}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ paciente.Responsable }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

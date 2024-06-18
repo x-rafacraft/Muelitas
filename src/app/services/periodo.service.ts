@@ -7,7 +7,7 @@ import { Periodo } from '../interfaces/periodo';
   providedIn: 'root'
 })
 export class PeriodoService {
-  private apiUrl = 'http://localhost:3000/periodo';
+  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/periodo';
 
   constructor(private http: HttpClient) { }
 

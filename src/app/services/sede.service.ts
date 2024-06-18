@@ -7,7 +7,7 @@ import { Sede } from '../interfaces/sede';
   providedIn: 'root'
 })
 export class SedeService {
-  private apiUrl = 'http://localhost:3000/sede';
+  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/sede';
 
   constructor(private http: HttpClient) {}
 

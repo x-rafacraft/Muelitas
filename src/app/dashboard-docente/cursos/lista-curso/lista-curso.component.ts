@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
     selector: 'app-cursos',
     standalone: true,
     imports: [
-        CommonModule, DdNavbarComponent, AsyncPipe, DdNavbarComponent, RouterModule, FormsModule
+        CommonModule, DdNavbarComponent, AsyncPipe, RouterModule, FormsModule
     ],
     templateUrl: './lista-curso.component.html',
     styleUrl: './lista-curso.component.css',
 })
-export default class CursosComponent implements OnInit {
+export default class ListaCursoComponent implements OnInit {
   public cursoResults$!: Observable<Curso[]>;
 
   constructor(private service: CursoService) { }

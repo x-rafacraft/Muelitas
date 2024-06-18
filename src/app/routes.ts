@@ -96,6 +96,32 @@ export const routes: Routes = [
         ]
       },
       {
+        path: 'paciente',
+        children :[
+          {
+            path: 'lista-paciente',
+            loadComponent: () => import('./dashboard-docente/paciente/lista-paciente/lista-paciente.component')
+          },
+        ]
+      },
+      {
+        path: 'tratamiento',
+        children :[
+          {
+            path: 'creacion-tratamiento',
+            loadComponent: () => import('./dashboard-docente/tratamiento/creacion-tratamiento/creacion-tratamiento.component')
+          },
+          {
+            path: 'lista-tratamiento',
+            loadComponent: () => import('./dashboard-docente/tratamiento/lista-tratamiento/lista-tratamiento.component')
+          },
+          {
+            path: 'modificar-tratamiento',
+            loadComponent: () => import('./dashboard-docente/tratamiento/modificar-tratamiento/modificar-tratamiento.component')
+          },
+        ]
+      },
+      {
         path: 'sede',
         children :[
           {

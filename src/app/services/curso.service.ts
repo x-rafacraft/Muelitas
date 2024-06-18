@@ -7,7 +7,7 @@ import { Curso } from '../interfaces/curso';
   providedIn: 'root'
 })
 export class CursoService {
-  private apiUrl = 'http://localhost:3000/curso';
+  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/curso';
 
   constructor(private http: HttpClient) { }
 
