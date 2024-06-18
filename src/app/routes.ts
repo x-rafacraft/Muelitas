@@ -45,7 +45,7 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard-estudiante/cita/lista-cita/lista-cita.component')
           },
           {
-            path: 'modificar-cita',
+            path: 'modificar-cita/:id',
             loadComponent: () => import('./dashboard-estudiante/cita/modificar-cita/modificar-cita.component')
           },
         ]
@@ -80,7 +80,7 @@ export const routes: Routes = [
       },
       {
         path: 'cita',
-        children :[
+        children: [
           {
             path: 'creacion-cita',
             loadComponent: () => import('./dashboard-docente/cita/creacion-cita/creacion-cita.component')
@@ -90,7 +90,7 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard-docente/cita/lista-cita/lista-cita.component')
           },
           {
-            path: 'modificar-cita',
+            path: 'modificar-cita/:id',
             loadComponent: () => import('./dashboard-docente/cita/modificar-cita/modificar-cita.component')
           },
         ]

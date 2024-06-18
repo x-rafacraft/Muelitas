@@ -5,23 +5,30 @@
   <div class="w-4/5">
     <div class="container mx-auto px-4 py-8">
       <h2 class="text-2xl font-bold mb-4">Listado de Citas</h2>
-      <div class="mb-4">
-        <input
-          type="text"
-          placeholder="Buscar por DNI del Paciente"
-          [(ngModel)]="searchDNI"
-          (input)="filterAppointments()"
-          class="px-4 py-2 border rounded-lg"
-        />
+
+      <!-- Filter Inputs -->
+      <div class="mb-4 flex space-x-4">
+        <input [(ngModel)]="filterDate" (ngModelChange)="onFilterChange()" type="date" class="shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Filtrar por Fecha">
+        <input [(ngModel)]="filterOdontologo" (ngModelChange)="onFilterChange()" type="text" class="shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Buscar por Odontólogo">
+        <button (click)="toggleSortOrder()" class="bg-blue-500 text-white py-2 px-4 rounded">
+          Ordenar por Fecha: {{ sortAscending ? 'Ascendente' : 'Descendente' }}
+        </button>
+        <button (click)="toggleTodayFilter()" class="bg-green-500 text-white py-2 px-4 rounded">
+          {{ filterToday ? 'Mostrar Todas' : 'Mostrar Hoy' }}
+        </button>
+        <button (click)="clearFilters()" class="bg-red-500 text-white py-2 px-4 rounded">
+          Borrar Filtros
+        </button>
       </div>
+
       <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
         <div class="inline-block min-w-full shadow overflow-hidden rounded-lg border-b border-gray-200">
           <table class="min-w-full leading-normal">
             <thead>
               <tr>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Id</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Fecha</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Hora</th>
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">DNI-Paciente</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Odontólogo</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Motivo</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Sede</th>
@@ -30,30 +37,31 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let appointment of filteredAppointments">
+              <tr *ngFor="let cita of filteredCitaResults$ | async">
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.fecha }}</span>
+                  <span class="text-gray-900">{{ cita.id }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.hora }}</span>
+                  <span class="text-gray-900">{{ cita.fecha }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.dni }}</span>
+                  <span class="text-gray-900">{{ cita.hora }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.odontologo }}</span>
+                  <span class="text-gray-900">{{ cita.odontologo }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.motivo }}</span>
+                  <span class="text-gray-900">{{ cita.motivo }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.sede }}</span>
+                  <span class="text-gray-900">{{ cita.sede }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ appointment.extras }}</span>
+                  <span class="text-gray-900">{{ cita.extras }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <a href="#" class="text-indigo-600 hover:text-indigo-900">Modificar</a>
+                  <button (click)="editCita(cita.id)" class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-700 mr-2">Editar</button>
+                  <button (click)="deleteCita(cita.id)" class="bg-red-500 text-white py-1 px-4 rounded hover:bg-red-700">Eliminar</button>
                 </td>
               </tr>
             </tbody>
