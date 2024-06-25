@@ -16,6 +16,15 @@ export class CitaService {
     return this.http.get<Cita[]>(`${this.apiUrl}/getall`);
   }
 
+  getCitaCount(): Observable<number> {
+    return new Observable<number>(observer => {
+      this.getCitaList().subscribe(citas => {
+        observer.next(citas.length);
+        observer.complete();
+      });
+    });
+  }
+
   addCita(cita: Cita): Observable<Cita> {
     return this.http.post<Cita>(`${this.apiUrl}/create`, cita);
   }
