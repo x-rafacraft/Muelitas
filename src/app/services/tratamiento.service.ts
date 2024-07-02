@@ -8,7 +8,7 @@ import { Tratamiento } from '../interfaces/tratamiento';
 })
 export class TratamientoService {
 
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/tratamiento';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/tratamiento';
 
   constructor(private http: HttpClient) { }
 

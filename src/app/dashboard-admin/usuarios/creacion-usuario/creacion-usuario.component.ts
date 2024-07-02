@@ -24,7 +24,7 @@ export default class CreacionUsuarioComponent {
         private router: Router
     ) {
         this.userForm = this.fb.group({
-            username: ['', Validators.required],
+            codigo: ['', Validators.required],
             email: ['', Validators.required],
             password: ['', Validators.required],
             estado: ['', Validators.required],

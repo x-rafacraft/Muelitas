@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/user';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/user';
 
   constructor(private http: HttpClient) {}
 

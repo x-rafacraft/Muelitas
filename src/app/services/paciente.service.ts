@@ -7,7 +7,7 @@ import { Paciente } from '../interfaces/paciente';
   providedIn: 'root'
 })
 export class PacienteService {
-  private apiUrl = 'http://localhost:8080/ToothLinkAPI/paciente';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/paciente';
 
   constructor(private http: HttpClient) { }
 

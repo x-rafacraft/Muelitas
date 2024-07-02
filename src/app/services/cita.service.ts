@@ -8,7 +8,7 @@ import { Cita } from '../interfaces/cita';
 })
 export class CitaService {
 
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/cita';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/cita';
 
   constructor(private http: HttpClient) { }
 

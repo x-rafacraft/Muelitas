@@ -10,7 +10,7 @@
           <table class="min-w-full leading-normal">
             <thead>
               <tr>
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Username</th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Codigo</th>
                 <!-- <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Apellido</th>
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Celular</th> -->
                 <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Correo</th>
@@ -23,7 +23,7 @@
             <tbody>
               <tr *ngFor="let user of usuarioResults$ | async">
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <span class="text-gray-900">{{ user.username }}</span>
+                  <span class="text-gray-900">{{ user.codigo }}</span>
                 </td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <span class="text-gray-900">{{user.email}}</span>

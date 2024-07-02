@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/user';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/user';
 
   constructor(private http: HttpClient) { }
 

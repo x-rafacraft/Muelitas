@@ -7,7 +7,7 @@ import { Sede } from '../interfaces/sede';
   providedIn: 'root'
 })
 export class SedeService {
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/sede';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/sede';
 
   constructor(private http: HttpClient) {}
 

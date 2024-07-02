@@ -7,7 +7,7 @@ import { Curso } from '../interfaces/curso';
   providedIn: 'root'
 })
 export class CursoService {
-  private apiUrl = 'http://[::1]:8080/ToothLinkAPI/curso';
+  private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/curso';
 
   constructor(private http: HttpClient) { }
 
