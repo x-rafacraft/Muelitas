@@ -32,6 +32,7 @@ export default class CreacionPeriodoComponent implements OnInit {
             nombre: ['', Validators.required],
             inicio: ['', Validators.required],
             fin: ['', Validators.required],
+            sedenom: ['', Validators.required],
             sede: ['', Validators.required]
         });
     }

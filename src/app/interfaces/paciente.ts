@@ -1,7 +1,8 @@
 export interface Paciente {
   id: number;
-  FechaCreacion: Date;
+  FechaCreacion: string;
   HoraCreacion: string;
+  dni: string;
   Nombre: string;
   ApellidoPaterno: string;
   ApellidoMaterno: string;

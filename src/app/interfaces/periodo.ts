@@ -5,6 +5,7 @@ export interface Periodo {
     nombre: string;
     inicio: string;
     fin: string;
+    sedenom: string;
     sede: Sede;
     docentedetalles: string[];
 }

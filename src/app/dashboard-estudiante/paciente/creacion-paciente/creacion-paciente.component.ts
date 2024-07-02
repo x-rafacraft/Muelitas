@@ -27,6 +27,7 @@ export default class CreacionPacienteComponent {
       this.pacienteForm = this.fb.group({
           FechaCreacion: ['', Validators.required],
           HoraCreacion: ['', Validators.required],
+          dni: ['', Validators.required],
           Nombre: ['', Validators.required],
           ApellidoPaterno: ['', Validators.required],
           ApellidoMaterno: ['', Validators.required],

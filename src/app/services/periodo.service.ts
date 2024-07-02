@@ -7,6 +7,7 @@ import { Periodo } from '../interfaces/periodo';
   providedIn: 'root'
 })
 export class PeriodoService {
+
   private apiUrl = 'https://back-end-odontologia-production.up.railway.app/Toothlinkapi/periodo';
 
   constructor(private http: HttpClient) { }
