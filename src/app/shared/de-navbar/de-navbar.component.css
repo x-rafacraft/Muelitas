@@ -91,6 +91,9 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .accordion {
@@ -136,5 +139,36 @@ ul li:hover i {
 }
 .logo i {
   font-size: 70px;
+  color: #21CCFC;
+}
+
+.logout-button-section {
+  margin-top: auto;
+  border-top: 1px solid #363636;
+}
+
+.logout-button {
+  display: block;
+  padding: 15px 20px;
+  width: 100%;
+  color: #FFF;
+  background: #222;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background: #363636;
+}
+
+.logout-button i {
+  font-size: 13px;
+  width: 15px;
+  margin-right: 15px;
+}
+
+.logout-button:hover i {
   color: #21CCFC;
 }
